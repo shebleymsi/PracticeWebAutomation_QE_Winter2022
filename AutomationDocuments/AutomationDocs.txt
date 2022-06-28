@@ -1,0 +1,17 @@
+Goal: Automate the Browser. Chrome Browser
+-Selenium
+-TestNG
+-Chrome Browser version 103
+-Chrome Browser Driver
+
+============================================
+Homework-1
+
+// Ten Test cases
+// ANy website: Amazon, Target,eBay,BestBuy,
+//
+============================================
+
+
+
+
