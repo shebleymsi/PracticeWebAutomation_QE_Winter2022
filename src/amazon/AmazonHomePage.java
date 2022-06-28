@@ -53,7 +53,7 @@ public class AmazonHomePage {
     }
 
     public static void setUpFireFoxBrowser() {
-        String fireFoxDriverPath = "                 ";
+        String fireFoxDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windos/FireFox/geckodriver.exe";
         System.setProperty("webdriver.gecko.driver", fireFoxDriverPath);
         driver = new FirefoxDriver();
     }
