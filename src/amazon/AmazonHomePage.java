@@ -47,13 +47,13 @@ public class AmazonHomePage {
 
 
     public static void setUpChromeBrowser() {
-        String chromeDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windos/chromedriver_win32/chromedriver.exe";
+        String chromeDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windows/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
         driver = new ChromeDriver();
     }
 
     public static void setUpFireFoxBrowser() {
-        String fireFoxDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windos/FireFox/geckodriver.exe";
+        String fireFoxDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windows/geckodriver.exe";
         System.setProperty("webdriver.gecko.driver", fireFoxDriverPath);
         driver = new FirefoxDriver();
     }
@@ -214,7 +214,7 @@ public class AmazonHomePage {
 
 
         // Enter email/ phoneNumber
-        driver.findElement(By.id("ap_email")).sendKeys("mh.shahib@gmail.com");
+        driver.findElement(By.id("ap_email")).sendKeys("shebleymsi@gmail.com");
 
 
         // Click continue button

@@ -13,7 +13,7 @@ public class FirstBasicBuildUp {
     public static void testSearchBox() throws InterruptedException {
 
 
-        String driverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windos/chromedriver_win32/chromedriver.exe";
+        String driverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windows/chromedriver.exe";
 
         System.setProperty("webdriver.chrome.driver",driverPath);
         WebDriver driver = new ChromeDriver();
