@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class A1_AmazonHomePage {
+public class AmazonHomePage_My_Pactice10 {
     static WebDriver driver;
     String browserName = "chrome";
     String url = "https://www.amazon.com/";

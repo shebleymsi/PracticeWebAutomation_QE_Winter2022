@@ -1,64 +1,26 @@
 package amazon;
 
 
+import base.TestBase;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
+public class AmazonHomePage extends TestBase {
 
-public class AmazonHomePage {
-    static WebDriver driver;
-    String browserName = "chrome";
-    String url = "https://www.amazon.com/";
+    // Action method class
+
     static String actualText;
 
-    @BeforeTest
-    public void setUpAutomation() {
-        System.out.println("***************** Automation Started *******************");
-    }
 
-    @AfterTest
-    public void tearDownAutomation() {
-        System.out.println("***************** Automation End *******************");
-
-    }
-
-    @BeforeTest
-    public void setUp() {
-        if (this.browserName == "chrome") {
-            setUpChromeBrowser();
-        } else if (this.browserName == "fireFox") {
-            setUpFireFoxBrowser();
-        }
-        //  navigate to amazon.com
-        driver.get(this.url);
-        driver.manage().window().maximize();
-
-    }
-
-    public static void setUpChromeBrowser() {
-        String chromeDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windows/chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver", chromeDriverPath);
-        driver = new ChromeDriver();
-    }
-
-    public static void setUpFireFoxBrowser() {
-        String fireFoxDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windows/geckodriver.exe";
-        System.setProperty("webdriver.gecko.driver", fireFoxDriverPath);
-        driver = new FirefoxDriver();
-    }
-
-
-    @Test
-    public static void testSearchBoxOnChrome() throws InterruptedException {
-
+    /**
+     * This method should search the product in amazon searchBox
+     *
+     * @throws InterruptedException Author: Shebley
+     */
+    public static void searchBoxOnChrome() throws InterruptedException {
         //   setUp("chrome","https://www.amazon.com/");
         //   enter keyword in searchBox field
+        driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iPhone 14");
         driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iPhone 14");
         //  click on search button
         driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
@@ -82,16 +44,18 @@ public class AmazonHomePage {
         } else {
             System.out.println("Test Fail");
         }
-
         // driver.findElement(By.tagName("id Value"));
         // Thread.sleep(10000);
-        driver.close();
+        //  driver.close();
 
     }
 
-    @Test(enabled = false)
-    public static void testSearchBoxOnFireFox() {
-
+    /**
+     * This method should search the product in amazon searchBox
+     *
+     * @throws InterruptedException Author: Shebley
+     */
+    public static void searchBoxOnFireFox() throws InterruptedException {
         //    setUp("fireFox","https://www.amazon.com/");
         //   enter keyword in searchBox field
         driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iPhone 14");
@@ -116,50 +80,20 @@ public class AmazonHomePage {
         } else {
             System.out.println("Test Fail");
         }
-
         // driver.findElement(By.tagName("id Value"));
         // Thread.sleep(10000);
-        driver.close();
+        // driver.close();
+
 
     }
 
     /**
-     * This test method will verify successful signIn using valid credential
+     * This method will verify successful signIn using valid credential
      *
-     * @throws InterruptedException
+     * @throws InterruptedException Author: Shebley
      */
 
-    @Test
-    public static void testSignIn() throws InterruptedException {
-        //   setUp("chrome","https://www.amazon.com/");
-        // Click on Hello SignIn
-        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).click();
-        // Enter email/ phoneNumber
-        driver.findElement(By.id("ap_email")).sendKeys("mh.shahib@gmail.com");
-        // Click continue button
-        driver.findElement(By.cssSelector("#continue")).click();
-        // Enter password
-        driver.findElement(By.name("password")).sendKeys("Test12345");
-        // Click SignIn Button
-        driver.findElement(By.className("a-button-input")).click();
-        // Verify successful login
-        String expectedText = "Hello, Mahmudul";
-        String actualText = driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).getText();
-        System.out.println("Actual Text : " + actualText);
-        Assert.assertEquals(actualText, expectedText, "SignIn not successful");
-        Thread.sleep(5000);
-        driver.close();
-
-    }
-
-    /**
-     * This test method will verify unsuccessful signIn using Invalid credential and verify Error message
-     *
-     * @throws InterruptedException
-     */
-
-    @Test
-    public static void testSignInUsingInvalidCredential() throws InterruptedException {
+    public static void signIn() throws InterruptedException {
         //   setUp("chrome","https://www.amazon.com/");
         // Click on Hello SignIn
         driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).click();
@@ -168,7 +102,38 @@ public class AmazonHomePage {
         // Click continue button
         driver.findElement(By.cssSelector("#continue")).click();
         // Enter password
-        driver.findElement(By.name("password")).sendKeys("Test12345");
+        driver.findElement(By.name("password")).sendKeys("010407As");
+        // Click SignIn Button
+        driver.findElement(By.className("a-button-input")).click();
+        // Verify successful login
+        String expectedText = "Hello, Shebley";
+        String actualText = driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).getText();
+        System.out.println("Actual Text : " + actualText);
+        Assert.assertEquals(actualText, expectedText, "SignIn not successful");
+        Thread.sleep(5000);
+        driver.close();
+
+
+    }
+
+    /**
+     * This method will verify unsuccessful signIn using Invalid credential and verify Error message
+     *
+     * @throws InterruptedException
+     */
+
+    public static void signInUsingInvalidCredential() throws InterruptedException {
+        //   setUp("chrome","https://www.amazon.com/");
+        // Click on Hello SignIn
+        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).click();
+        // System.out.println("Hello");
+        // Enter email/ phoneNumber
+        driver.findElement(By.id("ap_email")).sendKeys("shebleymsi@gmail.com");
+        // display();
+        // Click continue button
+        driver.findElement(By.cssSelector("#continue")).click();
+        // Enter password
+        driver.findElement(By.name("password")).sendKeys("010407As");
         // Click SignIn Button
         driver.findElement(By.className("a-button-input")).click();
         // Verify successful login
@@ -183,6 +148,30 @@ public class AmazonHomePage {
         Thread.sleep(5000);
         driver.close();
 
+    }
+
+    /**
+     * This method should navigateToYahoo
+     *
+     * @throws InterruptedException Author: Shebley
+     */
+    public static void navigateToYahoo() throws InterruptedException {
+        Thread.sleep(5000);
+        driver.navigate().to("https://www.yahoo.com");
+        driver.findElement(By.xpath("//*[@id=\"ybar-sbq\"]")).sendKeys("Trump");
+        driver.findElement(By.xpath("//*[@id=\"ybar-search\"]")).click();
+        Thread.sleep(5000);
+        driver.navigate().back();
+        Thread.sleep(5000);
+        driver.navigate().forward();
+        Thread.sleep(5000);
+        driver.navigate().refresh();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//*[@id=\"yschsp\"]")).clear();
+        driver.findElement(By.xpath("//*[@id=\"yschsp\"]")).sendKeys("Bush");
+        Thread.sleep(5000);
+
+        //  Thread.sleep(5000);
     }
 
 

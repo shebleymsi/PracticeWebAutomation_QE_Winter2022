@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-public class SecondBasicBuildUp {
+public class ThirdBasicBuildUp {
 //    static WebDriver driver;
 //    String browserName = "chrome";
 //    String url = "https://www.amazon.com/";
@@ -24,8 +24,8 @@ public class SecondBasicBuildUp {
 //
 //    @AfterTest
 //    public void tearDownAutomation() {
-//        driver.close();
 //        System.out.println("***************** Automation End *******************");
+//
 //    }
 //
 //    @BeforeTest
@@ -53,8 +53,10 @@ public class SecondBasicBuildUp {
 //        driver = new FirefoxDriver();
 //    }
 //
+//
 //    @Test
 //    public static void testSearchBoxOnChrome() throws InterruptedException {
+//
 //        //   setUp("chrome","https://www.amazon.com/");
 //        //   enter keyword in searchBox field
 //        driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iPhone 14");
@@ -83,6 +85,7 @@ public class SecondBasicBuildUp {
 //
 //        // driver.findElement(By.tagName("id Value"));
 //        // Thread.sleep(10000);
+//        driver.close();
 //
 //    }
 //
@@ -116,6 +119,7 @@ public class SecondBasicBuildUp {
 //
 //        // driver.findElement(By.tagName("id Value"));
 //        // Thread.sleep(10000);
+//        driver.close();
 //
 //    }
 //
@@ -131,7 +135,7 @@ public class SecondBasicBuildUp {
 //        // Click on Hello SignIn
 //        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).click();
 //        // Enter email/ phoneNumber
-//        driver.findElement(By.id("ap_email")).sendKeys("shebleymsi@gmail.com");
+//        driver.findElement(By.id("ap_email")).sendKeys("mh.shahib@gmail.com");
 //        // Click continue button
 //        driver.findElement(By.cssSelector("#continue")).click();
 //        // Enter password
@@ -144,6 +148,7 @@ public class SecondBasicBuildUp {
 //        System.out.println("Actual Text : " + actualText);
 //        Assert.assertEquals(actualText, expectedText, "SignIn not successful");
 //        Thread.sleep(5000);
+//        driver.close();
 //
 //    }
 //
@@ -152,13 +157,14 @@ public class SecondBasicBuildUp {
 //     *
 //     * @throws InterruptedException
 //     */
+//
 //    @Test
 //    public static void testSignInUsingInvalidCredential() throws InterruptedException {
 //        //   setUp("chrome","https://www.amazon.com/");
 //        // Click on Hello SignIn
 //        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).click();
 //        // Enter email/ phoneNumber
-//        driver.findElement(By.id("ap_email")).sendKeys("mh.shahib@gmail.com");
+//        driver.findElement(By.id("ap_email")).sendKeys("shebleymsi@gmail.com");
 //        // Click continue button
 //        driver.findElement(By.cssSelector("#continue")).click();
 //        // Enter password
@@ -175,7 +181,9 @@ public class SecondBasicBuildUp {
 //        System.out.println("Actual Title : " + actualTitle);
 //        Assert.assertEquals(actualTitle, expectedTitle, "Page Title not match");
 //        Thread.sleep(5000);
+//        driver.close();
 //
 //    }
+
 
 }
