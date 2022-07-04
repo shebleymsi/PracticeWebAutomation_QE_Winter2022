@@ -282,9 +282,9 @@ public class AmazonHomePage_My_Pactice10 {
     public static void CheckLocationOfUser() throws InterruptedException {
         // to check user's name and address in amazon header
         //    setUp("fireFox","https://www.amazon.com/");
-        // Check for Delivered Person Button is
+        // Check for Delivered Person Button is clickable
         driver.findElement(By.id("glow-ingress-line1")).click();
-        // this is to check the name of the person
+        // check the name of the person
         String actualText = driver.findElement(By.id("glow-ingress-line1")).getText();
         System.out.println("Actual Text " + actualText);
         // check for user's zipcode
@@ -299,6 +299,19 @@ public class AmazonHomePage_My_Pactice10 {
         System.out.println("Actual Text : " + actualText1);
         Assert.assertEquals(actualText1, expectedText, "user's name and address is matched");
         Thread.sleep(5000);
+
+    }
+
+    @Test
+    public void validUserShouldSignInSuccessfully() {
+        // Click the "Hello, Sign in Accout & Lists" button.
+        driver.findElement(By.xpath("bfdgfd")).click();
+        // Click the " Sign-In" bar.
+        // Enter valid Email or mobile phone number.
+        // Click the "Continue" button.
+        // Enter valid passwoard.
+        //  Click the " Sign-In" bar.
+        //  "Verify a valid or registered user should be sign in successfully and user last name displayed at the top right corner (beside the flag key) in the home page"
 
     }
 

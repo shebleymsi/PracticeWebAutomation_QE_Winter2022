@@ -3,32 +3,32 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
-public class TestBase {
+public class TestBase_02 {
+
     // Configuration purpose
+
     public static WebDriver driver;
     String browserName = "chrome";
     String url = "https://www.amazon.com/";
 
+
     @BeforeTest
     public void setUpAutomation() {
-
         System.out.println("***************** Automation Started *******************");
     }
 
-   @AfterTest(alwaysRun = true)
-    public void tearDownAutomation() {
-       driver.close();
-//        if (driver!=null){
-//            driver.quit();
-//        }
+    @AfterTest(alwaysRun = true)
+    public void tearDownAutomation(){
+        driver.close();
         System.out.println("***************** Automation End *******************");
+
     }
+
 
     @BeforeTest
     public void setUp() {
@@ -45,6 +45,7 @@ public class TestBase {
         driver.manage().deleteAllCookies();
     }
 
+
     public static void setUpChromeBrowser() {
         String chromeDriverPath = "../PracticeWebAutomation_QE_Winter2022/BrowserDriver/Windows/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);
@@ -57,9 +58,13 @@ public class TestBase {
         driver = new FirefoxDriver();
     }
 
+
     public static void display() {
         System.out.println("This is display");
     }
 
 
 }
+
+
+

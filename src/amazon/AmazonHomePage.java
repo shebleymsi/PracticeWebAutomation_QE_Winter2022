@@ -21,7 +21,6 @@ public class AmazonHomePage extends TestBase {
         //   setUp("chrome","https://www.amazon.com/");
         //   enter keyword in searchBox field
         driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iPhone 14");
-        driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("iPhone 14");
         //  click on search button
         driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
         // Verify searched product
@@ -133,7 +132,7 @@ public class AmazonHomePage extends TestBase {
         // Click continue button
         driver.findElement(By.cssSelector("#continue")).click();
         // Enter password
-        driver.findElement(By.name("password")).sendKeys("010407As");
+        driver.findElement(By.name("password")).sendKeys("010407A");
         // Click SignIn Button
         driver.findElement(By.className("a-button-input")).click();
         // Verify successful login
