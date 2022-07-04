@@ -131,7 +131,7 @@ public class AmazonHomePage_My_Pactice10 {
         // Click continue button
         driver.findElement(By.cssSelector("#continue")).click();
         // Enter password
-        driver.findElement(By.name("password")).sendKeys("010407");
+        driver.findElement(By.name("password")).sendKeys("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         // Click SignIn Button
         driver.findElement(By.className("a-button-input")).click();
         // Verify successful login
@@ -159,7 +159,7 @@ public class AmazonHomePage_My_Pactice10 {
         // Click continue button
         driver.findElement(By.cssSelector("#continue")).click();
         // Enter password
-        driver.findElement(By.name("password")).sendKeys("Test010407");
+        driver.findElement(By.name("password")).sendKeys("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         // Click SignIn Button
         driver.findElement(By.className("a-button-input")).click();
         // Verify successful login

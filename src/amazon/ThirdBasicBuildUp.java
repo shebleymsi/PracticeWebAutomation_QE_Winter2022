@@ -135,15 +135,15 @@ public class ThirdBasicBuildUp {
 //        // Click on Hello SignIn
 //        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).click();
 //        // Enter email/ phoneNumber
-//        driver.findElement(By.id("ap_email")).sendKeys("mh.shahib@gmail.com");
+//        driver.findElement(By.id("ap_email")).sendKeys("Shebleymsi@gmail.com");
 //        // Click continue button
 //        driver.findElement(By.cssSelector("#continue")).click();
 //        // Enter password
-//        driver.findElement(By.name("password")).sendKeys("Test12345");
+//        driver.findElement(By.name("password")).sendKeys("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 //        // Click SignIn Button
 //        driver.findElement(By.className("a-button-input")).click();
 //        // Verify successful login
-//        String expectedText = "Hello, Mahmudul";
+//        String expectedText = "Hello, Shebley";
 //        String actualText = driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).getText();
 //        System.out.println("Actual Text : " + actualText);
 //        Assert.assertEquals(actualText, expectedText, "SignIn not successful");
@@ -168,7 +168,7 @@ public class ThirdBasicBuildUp {
 //        // Click continue button
 //        driver.findElement(By.cssSelector("#continue")).click();
 //        // Enter password
-//        driver.findElement(By.name("password")).sendKeys("Test12345");
+//        driver.findElement(By.name("password")).sendKeys("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 //        // Click SignIn Button
 //        driver.findElement(By.className("a-button-input")).click();
 //        // Verify successful login

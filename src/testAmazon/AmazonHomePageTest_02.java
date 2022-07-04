@@ -22,7 +22,4 @@ public class AmazonHomePageTest_02 extends TestBase_02 {
     }
 
 
-
-
-
 }

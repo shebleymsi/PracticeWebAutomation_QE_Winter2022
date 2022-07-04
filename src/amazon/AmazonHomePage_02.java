@@ -32,7 +32,7 @@ public class AmazonHomePage_02 extends TestBase_02 {
         // Click on continue button
         driver.findElement(By.cssSelector("#continue")).click();
         // Enter password
-        driver.findElement(By.name("password")).sendKeys("010407As");
+        driver.findElement(By.name("password")).sendKeys("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         // Click SignIn Button
         driver.findElement(By.className("a-button-input")).click();
         // Verify successful login
