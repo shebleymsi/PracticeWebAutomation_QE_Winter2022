@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<students>
+
+    <studentId>101</studentId>
+
+
+    <emails>
+        <officeEmail>mahmud@amazon.com</officeEmail>
+        <personalEmail>mh.shahib@gmail.com</personalEmail>
+
+    </emails>
+
+
+    <address>
+        <officeAddress>
+            <newyorkOfficeAddress>
+                Queens,NY
+            </newyorkOfficeAddress>
+
+            <texasOfficeAddress>
+
+                <texasOfficeAddress1>dfsdfs</texasOfficeAddress1>
+                <texasOfficeAddress2>sdfsd</texasOfficeAddress2>
+                <texasOfficeAddress3>sdfsd</texasOfficeAddress3>
+
+
+            </texasOfficeAddress>
+
+
+        </officeAddress>
+
+
+    </address>
+
+
+</students>
+

@@ -5,32 +5,33 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
 public class TestBase {
     // Configuration purpose
+
+
     public static WebDriver driver;
     String browserName = "chrome";
     String url = "https://www.amazon.com/";
 
     @BeforeTest
     public void setUpAutomation() {
-
         System.out.println("***************** Automation Started *******************");
     }
 
-   @AfterTest(alwaysRun = true)
+    // @AfterTest()
+    @AfterMethod
     public void tearDownAutomation() {
-       driver.close();
-//        if (driver!=null){
-//            driver.quit();
-//        }
+        driver.close();
         System.out.println("***************** Automation End *******************");
     }
 
-    @BeforeTest
+    // @BeforeTest
+    @BeforeMethod
     public void setUp() {
         if (this.browserName == "chrome") {
             setUpChromeBrowser();

@@ -9,10 +9,10 @@ public class AmazonHomePageTest extends TestBase {
 
     // Test class
 
-//    @Test
-//    public void testNavigateToYahoo() throws InterruptedException {
-//        navigateToYahoo();
-//    }
+    @Test
+    public void testNavigateToYahoo() throws InterruptedException {
+        navigateToYahoo();
+    }
 
     @Test
     public void testSearchBoxOnChrome() throws InterruptedException {
@@ -29,10 +29,11 @@ public class AmazonHomePageTest extends TestBase {
         signIn();
     }
 
-    @Test(enabled = false)
+    @Test
     public void testSignInUsingInvalidCredential() throws InterruptedException {
         signInUsingInvalidCredential();
     }
+
 
 
 }

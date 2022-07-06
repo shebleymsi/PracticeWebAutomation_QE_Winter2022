@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml Default starting-->
+
+<!--XML is connedted with TestNG-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Amazon Test suite">
+
+    <test name="Amazon Automation Test">
+
+        <parameter name="number1" value="22"></parameter>
+        <parameter name="number2" value="33"></parameter>
+
+
+        <classes>
+            <!--           <class name="testAmazon.AmazonHomePageTest"/>-->
+            <class name="testAmazon.LearnTestNG"/>
+
+        </classes>
+
+
+    </test>
+
+
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

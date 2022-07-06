@@ -60,6 +60,7 @@ public class TestBase_02 {
 
 
     public static void display() {
+
         System.out.println("This is display");
     }
 

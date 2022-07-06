@@ -186,7 +186,7 @@ public class AmazonHomePage_My_Pactice10 {
     }
 
     @Test
-    public static void amazonLogoWorksAsHomePageButton() throws InterruptedException {
+    public static void notYetShipped() throws InterruptedException {
         // navigate to buy again page
         driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[13]")).click();
         // verify that by clicking Not Yet Shipped
