@@ -3,7 +3,7 @@ package testAmazon;
 import org.slf4j.Logger;
 import org.testng.annotations.*;
 
-// import static basic.HelloWorld.hello;  // NEXT : SHEBLEY
+ import static basic.HelloWorld.hello;  // NEXT:(SHEBLEY) maven jar installation then 05.23.10 v45
 
 public class LearnTestNG {
 
@@ -80,6 +80,7 @@ public class LearnTestNG {
 
 
     @Parameters({"number1", "number2"})
+//    or @Parameters({"number1", "number2"}) Time : 03.52.51 V45
     @Test
     public void getSum(@Optional("2") int a, @Optional("3") int b) {
         int c = a + b;
@@ -92,8 +93,8 @@ public class LearnTestNG {
 //    }
 
 
-    /* public void newTest(){  // NEXT : SHEBLEY
-        hello();
-    }*/
+    public void newTest(){  // NEXT : SHEBLEY  ( maven action>test>call here for test)
+        hello(); // maven jar installation then 05.23.10 v45
+    }
 
 }

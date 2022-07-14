@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--comment(For windows = ctrl+/): xml default starting -->
+
+
+<!--comment : XML file is connected with TestNG-->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Amazon Test suite">
+
+    <test name="Amazon Automation Test">
+
+        <parameter name="number1" value="20"></parameter>
+        <parameter name="number2" value="30"></parameter>
+
+        <parameter name="number3" value="40"></parameter>
+        <parameter name="number4" value="50"></parameter>
+
+
+        <classes>
+
+            <!--            <class name="testAmazon.AmazonHomePageTest"></class>-->
+            <!--            <class name="testAmazon.LearnTestNG"></class>-->
+            <!--            -->
+
+            <!--            <class name="testAmazon.AmazonHomePageTest_02"></class>-->
+            <!--            <class name="testAmazon.LearnTestNG_02"></class>-->
+
+
+            <class name="testAmazon.AmazonHomePageTest"/>
+            <class name="testAmazon.LearnTestNG"/>
+
+            <class name="testAmazon.AmazonHomePageTest_02"/>
+            <class name="testAmazon.LearnTestNG_02"/>
+
+
+            <!--            Comment : SHEBLEY : Closing .... <class name=""/>-->
+            <!--            <class name="testAmazon.AmazonHomePageTest"/>-->
+            <!--            <class name="testAmazon.LearnTestNG"/>-->
+            <!--            <class name="testAmazon.AmazonHomePageTest_02"/>-->
+            <!--            <class name="testAmazon.LearnTestNG_02"/>-->
+
+
+        </classes>
+
+
+    </test>
+
+</suite>
+
+
+        <!--<suite name="All Test Suite">-->
+        <!--    <test verbose="2" preserve-order="true"-->
+        <!--          name="C:/Users/MD SHAHADUL ISLAM/IdeaProjects/PracticeWebAutomation_QE_Winter2022/src/runner">-->
+        <!--        <classes/>-->
+        <!--    </test>-->
+        <!--</suite>-->

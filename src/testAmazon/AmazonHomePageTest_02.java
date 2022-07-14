@@ -1,6 +1,5 @@
 package testAmazon;
 
-
 import base.TestBase_02;
 import org.testng.annotations.Test;
 
@@ -144,8 +143,10 @@ public class AmazonHomePageTest_02 extends TestBase_02 {
 
     @Test
     public static void testCheckDefaultDeliverAddressOfUser() throws InterruptedException {
-        checkDefaultDeliverAddressOfUser();
+        checkDefaultDeliverAddressOfUser(); // 22
     }
+
+
 
 
 }

@@ -255,7 +255,6 @@ public class AmazonHomePage_My_Pactice10 {
         String actualText = driver.findElement(By.xpath("//*[@id=\"nav-link-accountList-nav-line-1\"]")).getText();
         Assert.assertEquals(actualText, expected, "Livestreams Amazon Live logo is clickable");
         Thread.sleep(5000);
-        ;
 
     }
 

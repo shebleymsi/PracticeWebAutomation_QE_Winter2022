@@ -80,11 +80,12 @@ public class LearnTestNG_02 {
     }
 
 
-    @Parameters({"number1", "number2"})
+    @Parameters({"number3", "number4"})
+//    or @Parameters({"number3", "number4"}) Time : 03.52.51 V45
     @Test
-    public void getSum(@Optional("2") int a, @Optional("3") int b) {
-        int c = a + b;
-        System.out.println("Sum value : " + c);
+    public void getSum(@Optional("2") int d, @Optional("3") int e) {
+        int f = d + e;
+        System.out.println("Summation value is : " + f);
     }
 
 //   @Test  @Parameters({"12","13"})
@@ -93,7 +94,7 @@ public class LearnTestNG_02 {
 //    }
 
 
-    /* public void newTest(){  // NEXT : SHEBLEY
+     /*public void newTest(){  // NEXT : SHEBLEY
         hello();
     }*/
 
